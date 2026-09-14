@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Profile - khanhdukaiser</title>
+    <!-- Tailwind CSS cdn -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        /* Tối ưu hóa cuộn mượt cho iOS và ẩn thanh cuộn */
+        body {
+            -webkit-tap-highlight-color: transparent;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-[#0b0f19] text-gray-100 min-h-screen flex flex-col justify-between pb-safe">
+
+    <!-- MAIN CONTAINER -->
+    <main class="w-full max-w-md mx-auto px-5 pt-8 pb-24 flex-grow select-none">
+        
+        <!-- PROFILE SECTION -->
+        <section class="flex flex-col items-center text-center mb-8">
+            <div class="relative w-24 h-24 mb-4 rounded-3xl bg-gradient-to-tr from-purple-600 to-blue-500 p-[3px] shadow-xl shadow-purple-950/30">
+                <div class="w-full h-full bg-[#111827] rounded-[21px] flex items-center justify-center overflow-hidden">
+                    <!-- Thay ảnh đại diện của bạn vào src -->
+                    <i class="fa-solid fa-user-astronaut text-4xl text-purple-400"></i>
+                </div>
+            </div>
+            <h1 class="text-2xl font-bold tracking-tight">khanhdukaiser</h1>
+            <p class="text-sm text-gray-400 mt-1">Roblox Developer & Script Creator</p>
+            
+            <!-- SOCIAL QUICK LINKS -->
+            <div class="flex gap-4 mt-4">
+                <a href="https://tiktok.com" target="_blank" class="w-10 h-10 bg-[#1e293b] rounded-2xl flex items-center justify-center text-xl text-gray-300 hover:text-white active:scale-95 transition-all">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://discord.com" target="_blank" class="w-10 h-10 bg-[#1e293b] rounded-2xl flex items-center justify-center text-xl text-gray-300 hover:text-indigo-400 active:scale-95 transition-all">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+                <a href="https://roblox.com" target="_blank" class="w-10 h-10 bg-[#1e293b] rounded-2xl flex items-center justify-center text-xl text-gray-300 hover:text-red-400 active:scale-95 transition-all">
+                    <i class="fa-solid fa-cube"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- GAMES SECTION -->
+        <section class="mb-8">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3 px-1">🎮 My Games</h2>
+            <div class="grid grid-cols-2 gap-3">
+                <!-- Game 1 -->
+                <div class="bg-[#111827] border border-gray-800/60 p-4 rounded-2xl flex flex-col justify-between h-28 shadow-sm">
+                    <div class="text-2xl text-purple-400"><i class="fa-solid fa-gamepad"></i></div>
+                    <div>
+                        <h3 class="font-semibold text-sm truncate">Blox Fruits Hub</h3>
+                        <p class="text-xs text-gray-500 truncate">Active Players: 1.2k</p>
+                    </div>
+                </div>
+                <!-- Game 2 -->
+                <div class="bg-[#111827] border border-gray-800/60 p-4 rounded-2xl flex flex-col justify-between h-28 shadow-sm">
+                    <div class="text-2xl text-blue-400"><i class="fa-solid fa-sword"></i></div>
+                    <div>
+                        <h3 class="font-semibold text-sm truncate">Anime Adventures</h3>
+                        <p class="text-xs text-gray-500 truncate">Update 2.0</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCRIPTS SECTION -->
+        <section class="mb-8">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3 px-1">📜 Scripts List</h2>
+            <div class="space-y-3">
+                <!-- Script Item -->
+                <div class="bg-[#111827] border border-gray-800/60 p-4 rounded-2xl shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="font-semibold text-sm">Auto Farm Chest v3</h3>
+                            <p class="text-xs text-gray-500">Updated 2 mins ago</p>
+                        </div>
+                        <button onclick="copyScript('loadstring(game:HttpGet(&quot;https://githubusercontent.com;))()', this)" class="bg-[#1e293b] text-xs text-purple-400 font-medium px-3 py-1.5 rounded-xl active:scale-95 transition-all flex items-center gap-1">
+                            <i class="fa-regular fa-copy"></i> <span>Copy</span>
+                        </button>
+                    </div>
+                    <div class="bg-[#0b0f19] text-xs font-mono p-2.5 rounded-xl text-gray-400 overflow-x-auto no-scrollbar border border-gray-800/40 whitespace-nowrap">
+                        loadstring(game:HttpGet("https://githubusercontent.com..."))()
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEEDBACK SECTION -->
+        <section class="mb-8">
+            <h2 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3 px-1">💬 Send Feedback</h2>
+            <form onsubmit="sendFeedback(event)" class="bg-[#111827] border border-gray-800/60 p-4 rounded-2xl space-y-3 shadow-sm">
+                <input type="text" placeholder="Your Roblox / Discord name..." required class="w-full bg-[#0b0f19] border border-gray-800 text-sm px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500 text-gray-200 transition-colors">
+                <textarea placeholder="Write your feedback here..." rows="3" required class="w-full bg-[#0b0f19] border border-gray-800 text-sm px-4 py-3 rounded-xl focus:outline-none focus:border-purple-500 text-gray-200 resize-none transition-colors"></textarea>
+                <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-sm font-semibold py-3 rounded-xl active:scale-[0.98] transition-all shadow-lg shadow-purple-950/20">
+                    Submit Feedback
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER NAV FOR IPHONE -->
+    <div class="fixed bottom-0 left-0 right-0 bg-[#111827]/80 backdrop-blur-xl border-t border-gray-800/60 pb-safe pt-2 z-50">
+        <div class="max-w-md mx-auto flex justify-around items-center text-gray-400 text-[10px] font-medium h-12">
+            <button class="flex flex-col items-center gap-0.5 text-purple-400">
+                <i class="fa-solid fa-house text-lg"></i> Profile
+            </button>
+            <button class="flex flex-col items-center gap-0.5 hover:text-gray-200">
+                <i class="fa-solid fa-gamepad text-lg"></i> Games
+            </button>
+            <button class="flex flex-col items-center gap-0.5 hover:text-gray-200">
+                <i class="fa-solid fa-code text-lg"></i> Scripts
+            </button>
+            <button class="flex flex-col items-center gap-0.5 hover:text-gray-200">
+                <i class="fa-solid fa-comment-dots text-lg"></i> Feedback
+            </button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR INTERACTIONS -->
+    <script>
+        // Hàm xử lý sao chép Script
+        function copyScript(text, button) {
+            navigator.clipboard.writeText(text).then(() => {
+                const icon = button.querySelector('i');
+                const span = button.querySelector('span');
+                
+                // Đổi trạng thái nút thành công
+                icon.className = 'fa-solid fa-check text-green-400';
+                span.innerText = 'Copied';
+                button.classList.add('bg-green-950/30');
+                
+                setTimeout(() => {
+                    icon.className = 'fa-regular fa-copy';
+                    span.innerText = 'Copy';
+                    button.classList.remove('bg-green-950/30');
+                }, 2000);
+            }).catch(err => {
+                alert('Không thể sao chép tự động, vui lòng tự bôi đen.');
+            });
+        }
+
+        // Hàm xử lý gửi Feedback
+        function sendFeedback(event) {
+            event.preventDefault();
+            alert('Feedback của bạn đã được ghi nhận! (Bạn cần kết nối API hoặc Webhook để lưu lại dữ liệu thực tế)');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
